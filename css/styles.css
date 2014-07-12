@@ -259,5 +259,7 @@ body {
 				left: 0;
 			}
 
-
+		div#tweet-controls {
+			display: none;
+		}
 

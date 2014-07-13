@@ -75,8 +75,11 @@ $('div.tweet').on("click", function() {
 
 //BLACK DIAMOND: Implement the Bootstrap tooltips for when you hover over a user’s avatar image -->
 //HINT: Bootstrap has good documentation =) -->
+var avatarHover = $('span.username').text().val();
 
+$('img.avatar').attr("title", avatarHover);
 
+$('img.avatar').tooltip(options);
 
 //BLACK DIAMOND: Make the timestamp below similar to how they look on Twitter (1h, 18m, 1m) and use the jQuery timeago plugin to make them automatic. -->
 //HINT: Refer to timeago documentation -->

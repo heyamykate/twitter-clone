@@ -21,8 +21,10 @@ $(document).ready(function() {
 		$('#tweet-controls').toggle();
 	})
 
+	jQuery("div.time").timeago();
+
 //STEP 3: As the user types the character count should decrease. Once it hits 10 character or less the count should turn red
-	
+
 	dashTweet.keyup(function() {
 		tweetLength.text(140 - dashTweet.val().length);
 		var charactersLeft = tweetLength.text();
@@ -52,7 +54,7 @@ $('#newTweet').hide();
 tweetSend.on("click", function() {
 	var tweet = $('#newTweet').clone(true);
 	tweet.removeAttr('id');
-	tweet.css({display: 'block'});	
+	tweet.css({display: 'block'});
 	$('#stream').prepend(tweet);
 	$('#newTweetText').text($('.tweet-compose').val());
 })
@@ -75,11 +77,7 @@ $('div.tweet').on("click", function() {
 
 //BLACK DIAMOND: Implement the Bootstrap tooltips for when you hover over a user’s avatar image -->
 //HINT: Bootstrap has good documentation =) -->
-var avatarHover = $('span.username').text().val();
 
-$('img.avatar').attr("title", avatarHover);
-
-$('img.avatar').tooltip(options);
 
 //BLACK DIAMOND: Make the timestamp below similar to how they look on Twitter (1h, 18m, 1m) and use the jQuery timeago plugin to make them automatic. -->
 //HINT: Refer to timeago documentation -->
@@ -91,8 +89,3 @@ $('img.avatar').tooltip(options);
 
 
 });
-
-
-
-
-
